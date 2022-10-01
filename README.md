@@ -13,8 +13,7 @@
 [![License](https://img.shields.io/github/license/gortz-python-sdk/gortz)](https://github.com/gortz-python-sdk/gortz/blob/master/LICENSE)
 ![Coverage Report](assets/images/coverage.svg)
 
-Awesome `gortz` is a Python cli/package created with https://github.com/TezRomacH/python-package-template
-
+Awesome `gortz` is a Python cli/package
 </div>
 
 ## Very first steps
@@ -390,15 +389,11 @@ This project is licensed under the terms of the `MIT` license. See [LICENSE](htt
 
 ```bibtex
 @misc{gortz,
-  author = {gortz},
-  title = {Awesome `gortz` is a Python cli/package created with https://github.com/TezRomacH/python-package-template},
+  author = {Adrian Gortzak},
+  title = {Awesome `gortz` is a Python SDK for gortz API},
   year = {2022},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/gortz-python-sdk/gortz}}
+  howpublished = {\url{https://github.com/gortz/gortz-python-sdk}}
 }
 ```
-
-## Credits [![🚀 Your next Python package needs a bleeding-edge project structure.](https://img.shields.io/badge/python--package--template-%F0%9F%9A%80-brightgreen)](https://github.com/TezRomacH/python-package-template)
-
-This project was generated with [`python-package-template`](https://github.com/TezRomacH/python-package-template)
