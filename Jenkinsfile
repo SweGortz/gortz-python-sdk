@@ -7,8 +7,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh "$HOME/.local/bin/poetry run 'pre-commit install'"
-        sh "$HOME/.local/bin/poetry run 'pre-commit run --all'"
+        sh "$HOME/.local/bin/poetry run 'pytest'"
       }
     }
     stage('Build and publish') {
