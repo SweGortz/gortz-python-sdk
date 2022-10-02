@@ -1,14 +1,19 @@
 pipeline {
   agent any
   stages {
+    stage('Setup') {
+      steps {
+        sh "$HOME/.poetry/bin/poetry install --no-root"      }
+    }
     stage('Test') {
       steps {
-        sh "poetry run pytest"
+        sh "$HOME/.poetry/bin/poetry run 'pre-commit install'"
+        sh "$HOME/.poetry/bin/poetry run 'pre-commit run --all'"
       }
     }
-    stage('Build') {
+    stage('Build and publish') {
       steps {
-        echo 'poetry publish --build'
+        echo '$HOME/.local/bin/poetry publish --build'
       }
     }
   }
