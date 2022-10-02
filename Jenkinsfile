@@ -12,7 +12,7 @@ pipeline {
     }
     stage('Build and publish') {
         when {
-            branch "master"
+            branch "main"
         }
       steps {
         echo '$HOME/.local/bin/poetry publish --build'
