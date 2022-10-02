@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh "$HOME/.poetry/bin/poetry install --no-root"      }
+        sh "$HOME/.local/bin/poetry install --no-root"      }
     }
     stage('Test') {
       steps {
-        sh "$HOME/.poetry/bin/poetry run 'pre-commit install'"
-        sh "$HOME/.poetry/bin/poetry run 'pre-commit run --all'"
+        sh "$HOME/.local/bin/poetry run 'pre-commit install'"
+        sh "$HOME/.local/bin/poetry run 'pre-commit run --all'"
       }
     }
     stage('Build and publish') {
