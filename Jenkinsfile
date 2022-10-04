@@ -1,14 +1,21 @@
 pipeline {
   agent any
   stages {
+    stage('Setup') {
+      steps {
+        sh "$HOME/.local/bin/poetry install --no-root"      }
+    }
     stage('Test') {
       steps {
-        sh "poetry run pytest"
+        sh "$HOME/.local/bin/poetry run 'pytest'"
       }
     }
-    stage('Build') {
+    stage('Build and publish') {
+        when {
+            branch "main"
+        }
       steps {
-        echo 'poetry publish --build'
+        echo '$HOME/.local/bin/poetry publish --build'
       }
     }
   }
