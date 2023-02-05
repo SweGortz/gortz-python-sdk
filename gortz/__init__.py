@@ -2,6 +2,8 @@
 """Awesome `gortz` is a Python cli/package created with https://github.com/TezRomacH/python-package-template"""
 
 import sys
+# Import all the gortz functions
+from .gortz import *
 
 if sys.version_info >= (3, 8):
     from importlib import metadata as importlib_metadata
